@@ -1,6 +1,8 @@
 package com.falyrion.gymtonicapp.fragments;
 
+import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -26,10 +28,14 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
     private double[] dataGoals;
     private String[] languages;
     private String currentLanguage;
+
+
     private boolean savePossible = false;
     private boolean firstSelect = true;
 
     private Button saveButton;
+
+    private Button connectMe;
 
     private class textWatcher implements TextWatcher {
         private int id;
@@ -75,6 +81,7 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
     }
 
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,7 +104,7 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
         // Languages
         languages = new String[] {
                 getResources().getString(R.string.lang_de),
-                getResources().getString(R.string.lang_en)
+                "English"
         };
     }
 
@@ -151,6 +158,15 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
                     ((Activity_Main) requireContext()).databaseHelper.setSettingsLanguage(currentLanguage);
 
                 }
+            }
+        });
+        connectMe = getView().findViewById(R.id.MeetDeveloper);
+        connectMe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://www.linkedin.com/in/aryan-srivastav-676117139/"));
+                startActivity(intent);
             }
         });
     }
