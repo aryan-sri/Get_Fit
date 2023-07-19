@@ -8,5 +8,7 @@
     <color name="text_low">#60687F</color>  <!-- Low level text and button-icons -->
     <color name="text_middle">#99A4C5</color>  <!-- Middle priority level text and button-icons -->
     <color name="text_high">#CDFFFFFF</color>  <!-- High priority level text and button-icons -->
-    <color name="pop_orange">#F97141</color>  <!-- Fill for Progress Bar -->
+    <color name="pop_orange">#F97141</color><!-- Fill for Progress Bar -->
+    <color name="primaryColor">#FFFFFF</color>
+    <color name="primaryColorDark">#808080</color>
 </resources>

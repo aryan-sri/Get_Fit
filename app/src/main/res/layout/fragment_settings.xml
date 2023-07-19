@@ -193,6 +193,18 @@
         android:text="@string/button_text_save" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_box_round_light"
+        android:textColor="@color/text_middle"
+        android:text="Go to Timer " />
+
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/MeetDeveloper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
