@@ -21,6 +21,7 @@ import androidx.fragment.app.Fragment;
 
 import com.falyrion.gymtonicapp.Activity_Main;
 import com.falyrion.gymtonicapp.R;
+import com.falyrion.gymtonicapp.activities.Activity_Timer;
 
 
 public class Fragment_Settings extends Fragment implements AdapterView.OnItemSelectedListener {
@@ -34,6 +35,8 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
     private boolean firstSelect = true;
 
     private Button saveButton;
+
+    private Button Timer;
 
     private Button connectMe;
 
@@ -158,6 +161,16 @@ public class Fragment_Settings extends Fragment implements AdapterView.OnItemSel
                     ((Activity_Main) requireContext()).databaseHelper.setSettingsLanguage(currentLanguage);
 
                 }
+            }
+        });
+
+        Timer = getView().findViewById(R.id.Timer);
+        Timer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent();
+                intent.setData(Uri.parse("https://www.linkedin.com/in/aryan-srivastav-676117139/"));
+                startActivity(intent);
             }
         });
         connectMe = getView().findViewById(R.id.MeetDeveloper);
